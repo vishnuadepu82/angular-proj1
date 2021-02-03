@@ -1,14 +1,15 @@
 <header>
-  <hello name="{{ name }}"></hello>
-  <p>
-    Start editing to see some magic happen :)
-  </p>
   <div [ngClass]="{bkgrndcls:c1,pddngclass:c2,brdrcls:c3}">
     <h2>{{banner}}</h2>
     <input type="text" [(ngModel)]="banner" />
 
-    <label> <input type="checkbox" [(ngModel)]="c1" />Background</label>
-    <label> <input type="checkbox" [(ngModel)]="c2" />padding</label>
-    <label> <input type="checkbox" [(ngModel)]="c3" />Border</label>
+    <div>
+      <label> <input type="checkbox" [(ngModel)]="c1" />Background</label>
+      <label> <input type="checkbox" [(ngModel)]="c2" />padding</label>
+      <label> <input type="checkbox" [(ngModel)]="c3" />Border</label>
+    </div>
   </div>
+  ------------------
+
+  <app-loan-form></app-loan-form>
 </header>
