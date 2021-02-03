@@ -1,0 +1,16 @@
+p {
+  font-family: Lato;
+}
+header {
+  background-color: #800f0f;
+  text-align: center;
+}
+bkgrndcls {
+  background-color: yellow;
+}
+brdrcls {
+  border: dotted;
+}
+pddngclass {
+  padding-left: 10px;
+}

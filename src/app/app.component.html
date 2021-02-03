@@ -1,0 +1,14 @@
+<header>
+	<hello name="{{ name }}"></hello>
+	<p>
+		Start editing to see some magic happen :)
+	</p>
+			<h2>{{banner}}</h2>
+		<input type="text" [(ngModel)]="banner" />
+    <div [class]="{bkgrndcls:c1,pddngclass:c2,brdrcls:c3}">
+   <label> <input type="checkbox" [(ngModel)]="c1">Background</label>
+    <label> <input type="checkbox" [(ngModel)]="c2">padding</label>
+     <label> <input type="checkbox" [(ngModel)]="c3">Border</label>
+   </div>
+	
+</header>
