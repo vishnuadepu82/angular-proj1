@@ -2,15 +2,15 @@ p {
   font-family: Lato;
 }
 header {
-  background-color: #800f0f;
+ 
   text-align: center;
 }
-bkgrndcls {
+.bkgrndcls {
   background-color: yellow;
 }
-brdrcls {
-  border: dotted;
+.brdrcls {
+  border: 10px dotted;
 }
-pddngclass {
+.pddngclass {
   padding-left: 10px;
 }
