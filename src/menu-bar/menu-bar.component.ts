@@ -9,10 +9,10 @@ export class MenuBarComponent implements OnInit {
   links: string[][];
   constructor() {
     this.links = [
-      ["/", "Home"],
       ["/loan", "Loan Form"],
       ["/pipes", "Pipes Demo"],
-      ["/sddc", "Structural Directives Demo"]
+      ["/sddc", "Structural Directives Demo"],
+      ["/tasks", "Tasks"]
     ];
   }
 

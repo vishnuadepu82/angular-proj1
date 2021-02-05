@@ -11,12 +11,15 @@ import { InWordsPipe } from "./in-words.pipe";
 import { StructuralDirectivesDemoComponent } from "../structural-directives-demo/structural-directives-demo.component";
 import { MenuBarComponent } from "../menu-bar/menu-bar.component";
 import { Routes, RouterModule } from "@angular/router";
+import { TaskmanagerComponent } from "../taskmanager/taskmanager.component";
+import { TaskService } from "../task.service";
 
 const routes: Routes = [
   { path: "", redirectTo: "/loan", pathMatch: "full" },
   { path: "loan", component: LoanFormComponent },
   { path: "pipes", component: BuiltInPipesComponent },
-  { path: "sddc", component: StructuralDirectivesDemoComponent }
+  { path: "sddc", component: StructuralDirectivesDemoComponent },
+  { path: "tasks", component: TaskmanagerComponent }
 ];
 
 @NgModule({
@@ -31,6 +34,6 @@ const routes: Routes = [
     MenuBarComponent
   ],
   bootstrap: [AppComponent],
-  providers: [LoanService]
+  providers: [LoanService, TaskService]
 })
 export class AppModule {}
