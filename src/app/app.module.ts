@@ -6,10 +6,11 @@ import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
 import { LoanFormComponent } from "./loan-form/loan-form.component";
 import { LoanService } from './loan.service';
+import { BuiltInPipesComponent } from "../built-in-pipes/built-in-pipes.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent, LoanFormComponent],
+  declarations: [AppComponent, HelloComponent, LoanFormComponent,BuiltInPipesComponent],
   bootstrap: [AppComponent],
   providers: [LoanService]
 })
