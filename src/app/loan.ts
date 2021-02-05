@@ -1,7 +1,7 @@
 export class loan {
-  amount: Number;
-  period: Number;
-  rateOfInterest: Number;
-  SimpleInterest: Number;
-  amountPayable: Number;
+  amount: number;
+  period: number;
+  rateOfInterest: number;
+  SimpleInterest: number;
+  amountPayable: number;
 }
