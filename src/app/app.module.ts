@@ -13,13 +13,23 @@ import { MenuBarComponent } from "../menu-bar/menu-bar.component";
 import { Routes, RouterModule } from "@angular/router";
 import { TaskmanagerComponent } from "../taskmanager/taskmanager.component";
 import { TaskService } from "../task.service";
+import { TasklistComponent } from "../tasklist/tasklist.component";
+import { AddtaskComponent } from "../addtask/addtask.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/loan", pathMatch: "full" },
   { path: "loan", component: LoanFormComponent },
   { path: "pipes", component: BuiltInPipesComponent },
   { path: "sddc", component: StructuralDirectivesDemoComponent },
-  { path: "tasks", component: TaskmanagerComponent }
+  {
+    path: "tasks",
+    component: TaskmanagerComponent,
+    children: [
+      { path: "", redirectTo: "/list", pathMatch: "full" },
+      { path: "list", component: TasklistComponent },
+      { path: "addtask", component: AddtaskComponent }
+    ]
+  }
 ];
 
 @NgModule({

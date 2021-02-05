@@ -1,0 +1,18 @@
+<section>
+  <table class="table table-bordered table-stripped">
+    <thead>
+      <tr>
+        <th>Task#</th>
+        <th>Task</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let link of links">
+        <td>{{link.taskId}}</td>
+        <td>{{link.task}}</td>
+        <td>{{link.isComplete?"Completed":"Pending"}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
