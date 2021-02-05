@@ -7,4 +7,32 @@
     UpperCase:<strong>{{strVal|uppercase }}</strong><br />
     Title Case:<strong>{{strVal|titlecase }}</strong>
   </p>
+  <h6>number pipes</h6>
+  <p>
+    Original:<strong>{{numVal }}</strong><br />
+    <strong>{{numVal|number:'1.2-5' }}</strong><br />
+    <strong>{{numVal|number:'5.0-0' }}</strong><br />
+    <strong>{{numVal|number:'5.1-2' }}</strong>
+    <strong>{{numVal|percent}}</strong><br />
+  </p>
+  <h6>currency Pipes</h6>
+  <p>
+     Original: <strong>{{numVal}}</strong><br />        
+        Indian Rupees: <strong>{{numVal|currency:'INR'}}</strong><br />
+        US Dollar: <strong>{{numVal|currency:'USD'}}</strong><br />
+        Great Britan Pound: <strong>{{numVal|currency:'GBP'}}</strong><br />
+        Australian Dollar: <strong>{{numVal|currency:'AUD'}}</strong><br />
+        Some Random Code: <strong>{{numVal|currency:'XYZ'}}</strong><br />
+  </p>
+  <h6>Date Pipes</h6>
+  <p>
+    Original: <strong>{{dateVal}}</strong><br />
+    Short Format<strong>{{dateVal|date:'short'}}</strong><br />
+    Long Format<strong>{{dateVal|date:'long'}}</strong><br />
+    Custom Format<strong>{{dateVal|date:'dd-MM-yyyy hh:mm:ss aa'}}</strong
+    ><br />
+    Custom Format<strong>{{dateVal|date:'dd-MM-yyyy HH:mm:ss'}}</strong><br />
+    Custom Format<strong>{{dateVal|date:'dd-MMM-yyyy'}}</strong><br />
+    Custom Format<strong>{{dateVal|date:'dd-MMMM-yyyy'}}</strong><br />
+  </p>
 </section>
