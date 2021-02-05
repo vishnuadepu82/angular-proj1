@@ -15,6 +15,8 @@ import { TaskmanagerComponent } from "../taskmanager/taskmanager.component";
 import { TaskService } from "../task.service";
 import { TasklistComponent } from "../tasklist/tasklist.component";
 import { AddtaskComponent } from "../addtask/addtask.component";
+import { Task } from "../task";
+import { TaskComponent } from "../task/task.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/loan", pathMatch: "full" },
@@ -25,9 +27,9 @@ const routes: Routes = [
     path: "tasks",
     component: TaskmanagerComponent,
     children: [
-      { path: "", redirectTo: "/list", pathMatch: "full" },
+      { path: "", redirectTo: "list", pathMatch: "full" },
       { path: "list", component: TasklistComponent },
-      { path: "addtask", component: AddtaskComponent }
+      { path: "new", component: AddtaskComponent }
     ]
   }
 ];
@@ -41,7 +43,11 @@ const routes: Routes = [
     BuiltInPipesComponent,
     InWordsPipe,
     StructuralDirectivesDemoComponent,
-    MenuBarComponent
+    MenuBarComponent,
+    TaskmanagerComponent,
+    TasklistComponent,
+    AddtaskComponent,
+    TaskComponent
   ],
   bootstrap: [AppComponent],
   providers: [LoanService, TaskService]

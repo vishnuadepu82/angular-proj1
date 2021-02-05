@@ -9,9 +9,11 @@ import { TaskService } from "../task.service";
 })
 export class TasklistComponent implements OnInit {
   tasks: Task[];
+  completedCount: number;
   constructor(private taskservice: TaskService) {}
 
   ngOnInit() {
     this.tasks = this.taskservice.getTasks();
+    this.completedCount = this.tasks.filter(f => f.isComplete).length;
   }
 }
