@@ -1,26 +1,28 @@
-<section class="container-fluid">
-  <h3>LoanForm</h3>
-  <form (ngSubmit)="compute()">
-    <div>
-      <label>Amount</label>
-      <input type="number" name="amnt" [(ngModel)]="loan.amount" />
+<section class="container-fluid p-4 bg-primary">
+	<h3>LoanForm</h3>
+	<form (ngSubmit)="compute()" class="form col-sm-4">
+		<div class="form-group">
+			<label class="form-control-label">Amount</label>
+			<input type="number" name="amnt" [(ngModel)]="loan.amount" class="form-control"/>
     </div>
-    <div>
-      <label>Period</label>
-      <input type="number" name="prd" [(ngModel)]="loan.period" />
+			<div class="form-group">
+				<label class="form-control-label">Period</label>
+				<input type="number" name="prd" [(ngModel)]="loan.period" class="form-control"/>
     </div>
-    <div>
-      <label>Rate of Interest</label>
-      <input type="number" name="roi" [(ngModel)]="loan.rateOfInterest" />
+				<div class="form-group">
+					<label class="form-control-label">Rate of Interest</label>
+					<input type="decimal" name="roi" [(ngModel)]="loan.rateOfInterest" class="form-control"/>
     </div>
-    <div>
-      <button>compute</button>
-    </div>
-    <div>
-      <p>
-        the amount you need to pay is {{loan.amountPayable}} with simple
-        interest {{loan.amountPayable}}
-      </p>
-    </div>
-  </form>
+					<div class="form-group">
+						<button class="btn btn-primary btn-block">compute</button>
+					</div>
+	</form>
+	<div class="col-sm-8 card card-info">
+		<div class="card-text text-center">
+			<p>
+				<strong>You need to pay {{loan.amountPayable}}
+                    including interest {{loan.SimpleInterest}}.</strong>
+			</p>
+		</div>
+	</div>
 </section>
