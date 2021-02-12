@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, EventEmitter, Output } from "@angular/core";
 import { Task } from "../task";
 
 @Component({
@@ -9,7 +9,17 @@ import { Task } from "../task";
 export class TaskComponent implements OnInit {
   @Input()
   taskDetails: Task;
-  constructor() {}
 
-  ngOnInit() {}
+  @Output()
+  toggleStatus: EventEmitter<number>;
+
+  constructor() {
+    this.toggleStatus = new EventEmitter<number>();
+  }
+
+  ngOnInit(): void {}
+
+  btnClicked() {
+    this.toggleStatus.emit(this.taskDetails.taskId);
+  }
 }
