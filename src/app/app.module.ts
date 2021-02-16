@@ -17,6 +17,9 @@ import { TasklistComponent } from "../tasklist/tasklist.component";
 import { AddtaskComponent } from "../addtask/addtask.component";
 import { Task } from "../task";
 import { TaskComponent } from "../task/task.component";
+import { NumberSeriesContainerComponent } from "./number-series-container/number-series-container.component";
+import { NumberSeriesComponent } from "./number-series/number-series.component";
+import { NumberSeriesService } from "./number-series.service";
 
 const routes: Routes = [
   { path: "", redirectTo: "/loan", pathMatch: "full" },
@@ -31,6 +34,10 @@ const routes: Routes = [
       { path: "list", component: TasklistComponent },
       { path: "new", component: AddtaskComponent }
     ]
+  },
+  {
+    path: "obdemo",
+    component: NumberSeriesContainerComponent
   }
 ];
 
@@ -47,9 +54,11 @@ const routes: Routes = [
     TaskmanagerComponent,
     TasklistComponent,
     AddtaskComponent,
-    TaskComponent
+    TaskComponent,
+    NumberSeriesContainerComponent,
+    NumberSeriesComponent
   ],
   bootstrap: [AppComponent],
-  providers: [LoanService, TaskService]
+  providers: [LoanService, TaskService, NumberSeriesService]
 })
 export class AppModule {}

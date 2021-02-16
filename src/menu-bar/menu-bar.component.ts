@@ -12,7 +12,8 @@ export class MenuBarComponent implements OnInit {
       ["/loan", "Loan Form"],
       ["/pipes", "Pipes Demo"],
       ["/sddc", "Structural Directives Demo"],
-      ["/tasks", "Tasks"]
+      ["/tasks", "Tasks"],
+      ["/obdemo", "Observables"]
     ];
   }
 
